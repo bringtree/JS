@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>剪刀石头布</title>
+</head>
+<body>
+<div>
+  <img id = "shitou" src = "shitou.jpg" >
+  <img id = "jiandao" src = "jiandao.jpg">
+  <img id = "bu" src = "bu.jpg">
+  <table id = "score" style="float:right;">
+    <tr>
+      <td>index</td>
+      <td>win</td>
+      <td>ping</td>
+      <td>lose</td>
+    </tr>
+  </table>
+</div>
+<img id = "player" >
+<span id = "winner"></span>
+<img id = "computer" >
+
+
+<script>
+  var i,j,player,computer,win=0,lose=0,ping=0,num=0;
+  player=document.getElementById("player");
+  computer=document.getElementById("computer");
+  winner = document.getElementById("winner");
+
+  var guess = function () {
+    i = Math.floor(Math.random()*3+1);
+    if(i==1) {computer.src ="shitou.jpg";}
+    if(i==2) {computer.src ="jiandao.jpg";}
+    if(i==3) {computer.src ="bu.jpg";}
+  };
+  var vs = function () {
+    if(i == j){ ping+=1; winner.innerHTML = "nobody WIN !";}
+    else if((i ==1 && j==2)||(i==2&&j==3)||(i==3&&j==1)){ lose+=1;winner.innerHTML = "computer WIN !";}
+    else { win+=1; winner.innerHTML = "player WIN !";}
+    var inRow = document.getElementById("score").insertRow(1);
+    num+=1;
+    inRow.insertCell(0).innerHTML=num;
+    inRow.insertCell(1).innerHTML=win;
+    inRow.insertCell(2).innerHTML=ping;
+    inRow.insertCell(3).innerHTML=lose;
+  };
+
+  document.getElementById("shitou").onclick=function () {
+    guess();
+    j=1;
+    player.src="shitou.jpg";
+    vs();
+  };
+  document.getElementById("jiandao").onclick=function () {
+    guess();
+    j=2;
+    player.src="jiandao.jpg";
+    vs();
+  };
+  document.getElementById("bu").onclick=function () {
+    guess();
+    j=3;
+    player.src="bu.jpg";
+    vs();
+  };
+
+
+
+</script>
+</body>
+</html>
