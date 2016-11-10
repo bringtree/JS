@@ -22,12 +22,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="task4.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="task4.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/task4.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+            <state relative-caret-position="228">
+              <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task5.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/task5.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="task5.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/task5.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1755">
+              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -38,8 +60,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -70,6 +92,8 @@
         <option value="$PROJECT_DIR$/btn.html" />
         <option value="$PROJECT_DIR$/task4.html" />
         <option value="$PROJECT_DIR$/task4.js" />
+        <option value="$PROJECT_DIR$/task5.html" />
+        <option value="$PROJECT_DIR$/task5.js" />
       </list>
     </option>
   </component>
@@ -706,12 +730,12 @@
       <workItem from="1478587705677" duration="1122000" />
       <workItem from="1478611901248" duration="19254000" />
       <workItem from="1478708267626" duration="637000" />
-      <workItem from="1478779005685" duration="8463000" />
+      <workItem from="1478779005685" duration="8820000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37556000" />
+    <option name="totallyTimeSpent" value="37913000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="34" y="27" width="1405" height="873" extended-state="0" />
@@ -895,8 +919,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task4.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
+        <state relative-caret-position="228">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task5.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1755">
+          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task5.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding />
         </state>
       </provider>
