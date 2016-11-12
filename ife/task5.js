@@ -8,6 +8,8 @@
  }
  };
  */
+var ctSelect = document.getElementById("city-select");
+var tmSelect = document.getElementById("form-gra-time");
 
 // 以下两个函数用于随机模拟生成测试数据
 function getDateStr(dat) {
@@ -21,7 +23,7 @@ function getDateStr(dat) {
 function randomBuildData(seed) {
   var returnData = {};
   var dat = new Date("2016-01-01");
-  var datStr = ''
+  var datStr = '';
   for (var i = 1; i < 92; i++) {
     datStr = getDateStr(dat);
     returnData[datStr] = Math.ceil(Math.random() * seed);
@@ -47,9 +49,9 @@ var chartData = {};
 
 // 记录当前页面的表单选项
 var pageState = {
-  nowSelectCity: -1,
+  nowSelectCity: "北京",
   nowGraTime: "day"
-}
+};
 
 /**
  * 渲染图表
@@ -61,8 +63,9 @@ function renderChart() {
 /**
  * 日、周、月的radio事件点击时的处理函数
  */
-function graTimeChange() {
+function graTimeChange(event) {
   // 确定是否选项发生了变化
+  event.stopPropagation();
 
   // 设置对应数据
 
@@ -72,11 +75,13 @@ function graTimeChange() {
 /**
  * select发生变化时的处理函数
  */
-function citySelectChange() {
+function citySelectChange(event) {
   // 确定是否选项发生了变化
+  event.stopPropagation();
+  pageState.nowSelectCity=ctSelect.value;
+  console.log(pageState.nowSelectCity);
 
   // 设置对应数据
-
   // 调用图表渲染函数
 }
 
@@ -85,6 +90,11 @@ function citySelectChange() {
  */
 function initGraTimeForm() {
 
+  var time = tmSelect.getElementsByTagName("input");
+  for (var i = 0;i<3;i++)
+  {
+    time[i].addEventListener('click',graTimeChange);
+  }
 }
 
 /**
@@ -92,8 +102,16 @@ function initGraTimeForm() {
  */
 function initCitySelector() {
   // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
-
+  for ( city in aqiSourceData)
+  {
+    var op=document.createElement("option");
+    op.innerHTML=city;
+    ctSelect.appendChild(op)
+  }
   // 给select设置事件，当选项发生变化时调用函数citySelectChange
+
+  ctSelect.addEventListener('change',citySelectChange);
+
 
 }
 
@@ -109,7 +127,7 @@ function initAqiChartData() {
  * 初始化函数
  */
 function init() {
-  initGraTimeForm()
+  initGraTimeForm();
   initCitySelector();
   initAqiChartData();
 }
