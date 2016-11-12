@@ -9,8 +9,8 @@
  };
  */
 var ctSelect = document.getElementById("city-select");
-var tmSelect = document.getElementById("form-gra-time");
-
+var tmSelect= document.getElementById("form-gra-time");
+var chart=document.getElementsByClassName("aqi-chart-wrap")[0];
 // 以下两个函数用于随机模拟生成测试数据
 function getDateStr(dat) {
   var y = dat.getFullYear();
@@ -57,6 +57,19 @@ var pageState = {
  * 渲染图表
  */
 function renderChart() {
+  var text = "";
+
+for( var date in chartData)
+{
+  var title = date;
+  var number = chartData[date];
+  var color = '#'+Math.floor(Math.random()*16777215).toString(16);
+
+  text+="<div title=\""+title+"\"style=\"height:"+ number+"px; background-color: "+color+"\" ><\/div>";
+  chart.innerHTML = text;
+
+}
+
 
 }
 
@@ -66,10 +79,13 @@ function renderChart() {
 function graTimeChange(event) {
   // 确定是否选项发生了变化
   event.stopPropagation();
-
-  // 设置对应数据
-
-  // 调用图表渲染函数
+  if(
+    pageState.nowGraTime != this.value) {
+    pageState.nowGraTime = this.value;
+    // 设置对应数据
+    renderChart();
+    // 调用图表渲染函数
+  }
 }
 
 /**
@@ -78,11 +94,14 @@ function graTimeChange(event) {
 function citySelectChange(event) {
   // 确定是否选项发生了变化
   event.stopPropagation();
-  pageState.nowSelectCity=ctSelect.value;
-  console.log(pageState.nowSelectCity);
+  if(pageState.nowSelectCity!=ctSelect.value)
+  {
+    pageState.nowSelectCity=ctSelect.value;
+    // 设置对应数据
+    renderChart();
+    // 调用图表渲染函数
+  }
 
-  // 设置对应数据
-  // 调用图表渲染函数
 }
 
 /**
@@ -102,7 +121,7 @@ function initGraTimeForm() {
  */
 function initCitySelector() {
   // 读取aqiSourceData中的城市，然后设置id为city-select的下拉列表中的选项
-  for ( city in aqiSourceData)
+  for ( var city in aqiSourceData)
   {
     var op=document.createElement("option");
     op.innerHTML=city;
@@ -121,6 +140,15 @@ function initCitySelector() {
 function initAqiChartData() {
   // 将原始的源数据处理成图表需要的数据格式
   // 处理好的数据存到 chartData 中
+  var chooseCity= pageState.nowSelectCity;
+  var chooseTime= pageState.nowGraTime;
+
+  chartData= aqiSourceData[chooseCity];
+
+
+
+
+
 }
 
 /**
