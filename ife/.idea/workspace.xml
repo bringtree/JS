@@ -27,12 +27,12 @@
       <file leaf-file-name="task5.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/task5.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="67" column="3" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="3" />
+            <state relative-caret-position="516">
+              <caret line="194" column="6" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="6" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1479040546000" expanded="true" signature="1641:1689" ph="..." />
-                <marker date="1479040546000" expanded="true" signature="1641:1697" ph="..." />
+                <marker date="1479040917000" expanded="true" signature="1641:1689" ph="..." />
+                <marker date="1479040917000" expanded="true" signature="1641:1697" ph="..." />
               </folding>
             </state>
           </provider>
@@ -749,12 +749,12 @@
       <workItem from="1478932506144" duration="6007000" />
       <workItem from="1478945034843" duration="5094000" />
       <workItem from="1478964003076" duration="2713000" />
-      <workItem from="1479031384755" duration="8127000" />
+      <workItem from="1479031384755" duration="8501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65794000" />
+    <option name="totallyTimeSpent" value="66168000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -819,8 +819,8 @@
           <caret line="126" column="22" selection-start-line="126" selection-start-column="22" selection-end-line="126" selection-end-column="22" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1479040546000" expanded="true" signature="1641:1689" ph="..." />
-            <marker date="1479040546000" expanded="true" signature="1641:1697" ph="..." />
+            <marker date="1479040917000" expanded="true" signature="1641:1689" ph="..." />
+            <marker date="1479040917000" expanded="true" signature="1641:1697" ph="..." />
           </folding>
         </state>
       </provider>
@@ -847,8 +847,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1479040546000" expanded="true" signature="1641:1689" ph="..." />
-            <marker date="1479040546000" expanded="true" signature="1641:1697" ph="..." />
+            <marker date="1479040917000" expanded="true" signature="1641:1689" ph="..." />
+            <marker date="1479040917000" expanded="true" signature="1641:1697" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1010,12 +1010,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task5.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="67" column="3" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="3" />
+        <state relative-caret-position="516">
+          <caret line="194" column="6" selection-start-line="194" selection-start-column="5" selection-end-line="194" selection-end-column="6" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1479040546000" expanded="true" signature="1641:1689" ph="..." />
-            <marker date="1479040546000" expanded="true" signature="1641:1697" ph="..." />
+            <marker date="1479040917000" expanded="true" signature="1641:1689" ph="..." />
+            <marker date="1479040917000" expanded="true" signature="1641:1697" ph="..." />
           </folding>
         </state>
       </provider>

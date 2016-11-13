@@ -83,15 +83,15 @@ function renderChart() {
 function graTimeChange(event) {
   // 确定是否选项发生了变化
   event.stopPropagation();
-  if(
-    pageState.nowGraTime != this.value) {
+  if(pageState.nowGraTime != this.value)
+  {
     pageState.nowGraTime = this.value;
-    console.log(this.value);
     initAqiChartData();
     // 设置对应数据
     renderChart();
     // 调用图表渲染函数
   }
+
 }
 
 /**
@@ -168,9 +168,7 @@ function initAqiChartData() {
         chartData[week] +=weekData[key];
       }
       weekFlag++;
-
     }
-    console.log(chartData)
   }
   if (chooseTime == 'month')
   {
@@ -188,10 +186,7 @@ function initAqiChartData() {
         chartData[monthFlag] +=monthData[key];
       }
     }
-    console.log(chartData)
   }
-
-
 }
 
 /**
@@ -201,6 +196,7 @@ function init() {
   initGraTimeForm();
   initCitySelector();
   initAqiChartData();
+  renderChart();
 }
 
 init();
