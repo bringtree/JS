@@ -58,15 +58,19 @@ var pageState = {
  */
 function renderChart() {
   var text = "";
+  var max = 0;
+  for (var data2 in chartData)
+  {
 
+    if(chartData[data2]>max){max = chartData[data2];}
+  }
   for( var date in chartData)
   {
-  var title = date;
-  var number = chartData[date];
-  var color = '#' + ('000000' + Math.floor(Math.random() * (0xFFFFFF - 1 + 1) + 1).toString(16)).slice(-6);
-
-  text+="<div title=\""+title+"\"style=\"height:"+ number+"px; background-color: "+color+"\" ><\/div>";
-  chart.innerHTML = text;
+    var title = date;
+    var number = chartData[date];
+    var color = '#' + ('000000' + Math.floor(Math.random() * (0xFFFFFF - 1 + 1) + 1).toString(16)).slice(-6);
+    text+="<div title=\""+title+"\"style=\"height:"+ 600*number/max+"px; background-color: "+color+"\" ><\/div>";
+    chart.innerHTML = text;
 
   }
 
@@ -153,7 +157,7 @@ function initAqiChartData() {
     var weekData = aqiSourceData[chooseCity];
     var weekFlag = 1;
     var week = 0;
-    for ( key in weekData)
+    for (var key in weekData)
     {
       if(weekFlag%7==1)
       {
@@ -173,7 +177,7 @@ function initAqiChartData() {
     chartData={};
     var monthData = aqiSourceData[chooseCity];
     var monthFlag;
-    for ( key in monthData)
+    for (var  key in monthData)
     {
       if(monthFlag != key.slice(0,7))
       {
