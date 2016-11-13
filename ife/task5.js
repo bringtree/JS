@@ -59,16 +59,16 @@ var pageState = {
 function renderChart() {
   var text = "";
 
-for( var date in chartData)
-{
+  for( var date in chartData)
+  {
   var title = date;
   var number = chartData[date];
-  var color = '#'+Math.floor(Math.random()*16777215).toString(16);
+  var color = '#' + ('000000' + Math.floor(Math.random() * (0xFFFFFF - 1 + 1) + 1).toString(16)).slice(-6);
 
   text+="<div title=\""+title+"\"style=\"height:"+ number+"px; background-color: "+color+"\" ><\/div>";
   chart.innerHTML = text;
 
-}
+  }
 
 
 }
@@ -82,6 +82,8 @@ function graTimeChange(event) {
   if(
     pageState.nowGraTime != this.value) {
     pageState.nowGraTime = this.value;
+    console.log(this.value);
+    initAqiChartData();
     // 设置对应数据
     renderChart();
     // 调用图表渲染函数
@@ -97,6 +99,7 @@ function citySelectChange(event) {
   if(pageState.nowSelectCity!=ctSelect.value)
   {
     pageState.nowSelectCity=ctSelect.value;
+    initAqiChartData();
     // 设置对应数据
     renderChart();
     // 调用图表渲染函数
@@ -142,11 +145,47 @@ function initAqiChartData() {
   // 处理好的数据存到 chartData 中
   var chooseCity= pageState.nowSelectCity;
   var chooseTime= pageState.nowGraTime;
+  if (chooseTime == 'day')
+  { chartData= {};chartData= aqiSourceData[chooseCity];}
+  if (chooseTime == 'week')
+  {
+    chartData ={};
+    var weekData = aqiSourceData[chooseCity];
+    var weekFlag = 1;
+    var week = 0;
+    for ( key in weekData)
+    {
+      if(weekFlag%7==1)
+      {
+        week++;
+        chartData[week] =weekData[key];
+      }
+      else{
+        chartData[week] +=weekData[key];
+      }
+      weekFlag++;
 
-  chartData= aqiSourceData[chooseCity];
-
-
-
+    }
+    console.log(chartData)
+  }
+  if (chooseTime == 'month')
+  {
+    chartData={};
+    var monthData = aqiSourceData[chooseCity];
+    var monthFlag;
+    for ( key in monthData)
+    {
+      if(monthFlag != key.slice(0,7))
+      {
+        monthFlag = key.slice(0,7);
+        chartData[monthFlag]= monthData[key];
+      }
+      else{
+        chartData[monthFlag] +=monthData[key];
+      }
+    }
+    console.log(chartData)
+  }
 
 
 }
