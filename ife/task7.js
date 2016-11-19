@@ -26,22 +26,23 @@ add.addEventListener('click',function () {
 },false);
 
 sortN.addEventListener('click',function () {
+  var time =500;
   for(var i = 0;i<inputNum.length;i++){
     for(var j = i+1;j<inputNum.length;j++){
       if(inputNum[i]>inputNum[j])
       {
-        var time =200;
-        time +=200;
         inputNum[i] = inputNum[i]+inputNum[j];
         inputNum[j] = inputNum[i]-inputNum[j];
         inputNum[i] = inputNum[i]-inputNum[j];
-        (function (array,time) {
-          var newArray = array;
-          return setTimeout(draw(newArray),time);
-        })(inputNum,time)
+        (function (array) {
+          var newArray = array.concat("");
+          return setTimeout(function(){draw(newArray)},time);
 
+        })(inputNum);
+        time+=500;
       }
     }
+    console.log(time);
   }
 
 //   解决方法 法1 在定时器 中加入if（） 当 i > length 后 结束定时器 。
