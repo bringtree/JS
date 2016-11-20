@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    textarea{
+      display:block;
+    }
+    .langType{
+      display: inline-block;
+      padding:5px 3px;
+      background-color: cornflowerblue;
+      color:white;
+      font-size: 30px;
+    }
+    .hobbyType{
+      display: inline-block;
+      padding:5px 3px;
+      background-color: orange;
+      color:white;
+      font-size: 30px;
+    }
+  </style>
+</head>
+
+
+
+<body>
+<span>Tag:</span><input type="text" id="firstInput">
+<div style="margin: 20px 0" id="contain">
+  <div class ="langType" onmouseover="over(this)" onmouseout="out(this)" onclick="del(this)">HTML5</div>
+  <div class ="langType" onmouseover="over(this)" onmouseout="out(this)" onclick="del(this)">Javascript</div>
+  <div class ="langType" onmouseover="over(this)" onmouseout="out(this)" onclick="del(this)">CSS</div>
+</div>
+<textarea style="width:400px;height:200px" id = 'hobbyInput'></textarea>
+<input type="button" value="确定兴趣爱好" id = 'btn'>
+<div style="margin: 3px 0;" id ="hobbyContain">
+  <div class ="hobbyType">游泳</div>
+  <div class ="hobbyType">瑜伽</div>
+  <div class ="hobbyType">摄影</div>
+</div>
+
+</body>
+<script src="task8.js"></script>
+</html>
