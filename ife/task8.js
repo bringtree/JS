@@ -22,7 +22,7 @@ input.addEventListener("keypress",function (event) {
   }
 },false);
 
-
+//对象是引用传递 所以下面的方法不行；
 // for(var i=0;i<language.length;i++)
 // {
 //   (function ( num ) {
