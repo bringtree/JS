@@ -8,23 +8,29 @@
   div{
     /*position: absolute;*/
     display: flex;
-    align-items:center;
-    justify-content:space-around;
+    align-items: center;
+    justify-content: space-around;
   }
   .grandpa{
-    background-color: red;
-    width:600px;
+    width: 600px;
     height: 200px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
   }
   .father{
-    background-color: aqua;
     width: 200px;
     height: 100px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
   }
   .son{
-    background-color: antiquewhite;
     width: 40px;
     height: 40px;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
   }
 </style>
 <body>
@@ -38,7 +44,9 @@
     <div class = "son"></div>
   </div>
 </div>
-
+<button id="DLR">前序遍历</button>
+<button id="LDR">中序遍历</button>
+<button id="LRD">后序遍历</button>
 
 
 </body>
